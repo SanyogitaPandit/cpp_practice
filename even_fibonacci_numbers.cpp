@@ -1,16 +1,34 @@
-int multiple3n5(int n)
+int even_fibonacci_num(int n)
 {
-  if(n < 3)
+  cout<<1<<" ";
+
+  if(n == 1)   
     return 0;
   
-  int sum = 3;
-  for(int i = 4; i<n; ++i)
-  {
-    if( i % 3 == 0 || i % 5 == 0)
+  cout<<2<<" ";
+
+  if(n == 2)   
+    return 2;
+
+  int evenSum = 2;
+  int term1 = 1;
+  int term2 = 2;
+  
+  for(int i = 3; i<=n; ++i)
+  {    
+    int currentTerm = term1 + term2;
+    
+    if(currentTerm > 4000000)
+      return evenSum;
+
+    if( currentTerm % 2 == 0)
     {
-      sum += i;
-    }    
+      evenSum += currentTerm;
+    }
+
+    term1 = term2;
+    term2 = currentTerm;
   }
 
-  return sum;
+  return evenSum;
 }
