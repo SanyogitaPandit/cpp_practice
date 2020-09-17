@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
@@ -7,6 +8,6 @@ int main()
   while(n != 0){
     cout<<"\n" << "Enter a number: ";  
     cin >> n ;
-    cout<<"\n" << (n) ;
+    cout<<"\n" << (n);
   }
 }
