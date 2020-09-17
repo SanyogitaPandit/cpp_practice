@@ -1,11 +1,7 @@
 int even_fibonacci_num(int n)
 {
-  cout<<1<<" ";
-
   if(n == 1)   
     return 0;
-  
-  cout<<2<<" ";
 
   if(n == 2)   
     return 2;
